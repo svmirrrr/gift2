@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💖</title>
+
+<style>
+  body {
+    background: #fde2e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    position: relative; 
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #590d22;
+  }
+
+  button {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  #yes {
+    background: #ff4d6d;
+    color: white;
+  }
+
+  #no {
+    background: #ffe5ec;
+    position: absolute;
+  }
+
+  #sticker {
+    display: none;
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  #message {
+    display: none;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ff4d6d;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>✨ Will you be my Valentine?</h2>
+
+  <button id="yes" onclick="yesClicked()">Yes 💖</button>
+  <button id="no" onmouseover="moveNo()">No</button>
+
+  <div id="message">YAY!!! ❤️</div>
+  <img id="sticker" src="love.gif" alt="love gif">
+</div>
+
+<script>
+function moveNo() {
+  const no = document.getElementById("no");
+  no.style.left = Math.random() * 80 + "%";
+  no.style.top = Math.random() * 80 + "%";
+}
+
+function yesClicked() {
+  document.getElementById("sticker").style.display = "block";
+  document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
